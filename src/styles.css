@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-dark: #121212;
+    --bg-card: #181818;
+    --bg-card-hover: #282828;
+    --text-main: #ffffff;
+    --text-muted: #b3b3b3;
+    --accent-red: #e50914;
+    --accent-red-hover: #ff1e27;
+    --border-color: #282828;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-main);
+}
