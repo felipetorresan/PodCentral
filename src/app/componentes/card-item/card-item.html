@@ -1,0 +1,28 @@
+<article class="card">
+    <!-- Property Binding: [src] e [alt] -->
+    <img [src]="podcast.imagem" [alt]="podcast.titulo" class="card-img" />
+
+    <div class="card-body">
+        <!-- Interpolação: {{ ... }} -->
+        <h3>{{ podcast.titulo }}</h3>
+        <p class="apresentador">Com: {{ podcast.apresentador }}</p>
+
+        <!-- Diretiva Condicional @if -->
+        @if (podcast.disponivel) {
+        <span class="badge disponivel">● Disponível</span>
+        } @else {
+        <span class="badge indisponivel">● Indisponível</span>
+        }
+
+        <div class="acoes">
+            <!-- Event Binding: (click) -->
+            <button class="btn-favorito" [class.favoritado]="favorito" (click)="alternarFavorito()">
+                {{ favorito ? '❤️ Salvo' : '🤍 Salvar' }}
+            </button>
+
+            <button class="btn-detalhes" [disabled]="!podcast.disponivel" (click)="verDetalhes()">
+                Ver Detalhes
+            </button>
+        </div>
+    </div>
+</article>

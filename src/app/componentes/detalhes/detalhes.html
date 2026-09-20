@@ -1,0 +1,39 @@
+@if (item) {
+<section class="painel-detalhes">
+    <div class="cabecalho-detalhes">
+        <h2>Detalhes do Episódio</h2>
+        <button class="btn-fechar" (click)="fecharDetalhes()">✕</button>
+    </div>
+
+    <article class="conteudo-detalhes">
+        <img [src]="item.imagem" [alt]="item.titulo" class="capa-detalhes" />
+
+        <div class="info-detalhes">
+            <h3>{{ item.titulo }}</h3>
+            <p class="apresentador"><strong>Apresentador:</strong> {{ item.apresentador }}</p>
+            <p class="duracao"><strong>Duração:</strong> {{ item.duracao }}</p>
+            <p class="descricao">{{ item.descricao }}</p>
+
+            <div class="status-player">
+                @if (reproduzindo) {
+                <p class="mensagem-status tocando">▶ Reproduzindo agora...</p>
+                } @else {
+                <p class="mensagem-status pausado">⏸ Episódio pausado.</p>
+                }
+            </div>
+
+            <div class="acoes-detalhes">
+                <button class="btn-play" [class.executando]="reproduzindo" (click)="alternarPlay()">
+                    {{ reproduzindo ? 'Pausar Episódio' : 'Tocar Episódio' }}
+                </button>
+
+                <button class="btn-favorito" [class.ativo]="favorito" (click)="alternarFavorito()">
+                    {{ favorito ? '♥ Salvo nos Favoritos' : '♡ Adicionar aos Favoritos' }}
+                </button>
+            </div>
+
+            <p class="curtidas-count"><strong>{{ curtidas }}</strong> pessoas curtiram este episódio.</p>
+        </div>
+    </article>
+</section>
+}
