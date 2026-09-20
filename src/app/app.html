@@ -20,7 +20,8 @@
   </section>
 
   @if (podcastSelecionado) {
-  <app-detalhes [item]="podcastSelecionado"></app-detalhes>
+  <app-detalhes [item]="podcastSelecionado" (aoFechar)="limparSelecao()">
+  </app-detalhes>
   }
 </main>
 

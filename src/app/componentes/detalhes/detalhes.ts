@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class Detalhes {
   @Input() item: any = null;
+
+  @Output() aoFechar = new EventEmitter<void>();
 
   reproduzindo = false;
   favorito = false;
@@ -23,6 +25,6 @@ export class Detalhes {
   }
 
   fecharDetalhes(): void {
-    this.item = null;
+    this.aoFechar.emit();
   }
 }

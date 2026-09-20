@@ -23,4 +23,8 @@ export class App {
   selecionarPodcast(podcast: any): void {
     this.podcastSelecionado = podcast;
   }
+
+  limparSelecao(): void {
+    this.podcastSelecionado = null;
+  }
 }

@@ -1,13 +1,12 @@
 <article class="card">
-    <!-- Property Binding: [src] e [alt] -->
+    <!-- property binding [src] e [alt] -->
     <img [src]="podcast.imagem" [alt]="podcast.titulo" class="card-img" />
 
     <div class="card-body">
-        <!-- Interpolação: {{ ... }} -->
+        <!-- interpolacao do titulo da podcast-->
         <h3>{{ podcast.titulo }}</h3>
         <p class="apresentador">Com: {{ podcast.apresentador }}</p>
-
-        <!-- Diretiva Condicional @if -->
+        <!-- diretivas -->
         @if (podcast.disponivel) {
         <span class="badge disponivel">● Disponível</span>
         } @else {
