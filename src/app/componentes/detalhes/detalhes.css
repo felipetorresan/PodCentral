@@ -1,0 +1,131 @@
+.painel-detalhes {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 30px;
+}
+
+.cabecalho-detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.cabecalho-detalhes h2 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-fechar:hover {
+    color: var(--accent-red);
+}
+
+.conteudo-detalhes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.capa-detalhes {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info-detalhes {
+    flex: 1;
+    min-width: 250px;
+}
+
+.info-detalhes h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.apresentador,
+.duracao {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.descricao {
+    margin: 12px 0;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.status-player {
+    margin-bottom: 16px;
+}
+
+.mensagem-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.mensagem-status.tocando {
+    background-color: rgba(229, 9, 20, 0.2);
+    color: var(--accent-red);
+}
+
+.mensagem-status.pausado {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+}
+
+.acoes-detalhes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.btn-play {
+    background-color: var(--accent-red);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-play.executando {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-favorito {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-favorito.ativo {
+    border-color: var(--accent-red);
+    color: var(--accent-red);
+}
+
+.curtidas-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
