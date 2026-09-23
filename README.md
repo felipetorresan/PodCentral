@@ -29,3 +29,7 @@ Aplicao web com angular sobre um sistema de podcast ficticio.
 3. abra console no vscode e digite npm start
 
 4. abra o link dado no console
+
+## aviso
+
+- sem video do youtube, OBS e webcam nao funcionando ou nao capturando certo o conteudo.
